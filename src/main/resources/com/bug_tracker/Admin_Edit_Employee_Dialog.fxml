@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane prefHeight="514.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bug_tracker.GUI.Admin.EditEmployeeDialog_Controller">
+    <content>
+        <AnchorPane prefHeight="498.0" prefWidth="1140.0">
+            <children>
+                <Text layoutX="390.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Employee Details">
+                    <font>
+                        <Font size="38.0" />
+                    </font>
+                </Text>
+                <Text layoutX="40.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <Text layoutX="40.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNIC">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <Text layoutX="570.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <Text layoutX="570.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="employeeName" layoutX="137.0" layoutY="155.0" prefHeight="25.0" prefWidth="285.0" promptText="Enter Employee Name" />
+                <TextField fx:id="employeeCNIC" layoutX="135.0" layoutY="211.0" prefHeight="25.0" prefWidth="283.0" promptText="Enter CNIC" />
+                <TextField fx:id="employeeContactNo" layoutX="699.0" layoutY="158.0" prefHeight="25.0" prefWidth="255.0" promptText="Enter Contact No" />
+                <TextField fx:id="employeeEmail" layoutX="715.0" layoutY="208.0" prefHeight="25.0" prefWidth="243.0" promptText="Enter Email" />
+                <Label fx:id="employeeUpdateStatus" layoutX="758.0" layoutY="466.0" prefHeight="17.0" prefWidth="340.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Text layoutX="663.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="40.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="employeePassword" layoutX="185.0" layoutY="332.0" prefHeight="25.0" prefWidth="244.0" promptText="Enter Password" />
+                <Text layoutX="40.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="employeeUserName" layoutX="185.0" layoutY="279.0" prefHeight="25.0" prefWidth="243.0" promptText="Enter Username" />
+                <Button layoutX="495.0" layoutY="445.0" mnemonicParsing="false" onAction="#perform_UpdateDetails" text="Update Details">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            <Label layoutX="574.0" layoutY="271.0" text="Designation">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="changeToTeamHead" layoutX="642.0" layoutY="315.0" mnemonicParsing="false" onAction="#getChoice" text="Team Head">
+               <toggleGroup>
+                  <ToggleGroup fx:id="updateDesignation" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="changeToDeveloper" layoutX="645.0" layoutY="349.0" mnemonicParsing="false" onAction="#getChoice" text="Developer" toggleGroup="$updateDesignation" />
+            <RadioButton fx:id="changeToTester" layoutX="645.0" layoutY="383.0" mnemonicParsing="false" onAction="#getChoice" text="Tester" toggleGroup="$updateDesignation" />
+
+            </children>
+        </AnchorPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bug_tracker.GUI.Team_Head.ManageProjectStatus_Controller">
+    <children>
+        <Text layoutX="530.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Project Status">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <TableView fx:id="tableviewProjectDetails" layoutX="20.0" layoutY="148.0" prefHeight="525.0" prefWidth="1262.0">
+            <columns>
+                <TableColumn fx:id="colProjectUniqueID" prefWidth="111.0" text="Project Unique ID" />
+                <TableColumn fx:id="colProjectName" prefWidth="121.0" text="Project Name" />
+                <TableColumn fx:id="colClientName" prefWidth="123.0" text="Client Name" />
+                <TableColumn fx:id="colGithubRepoLink" prefWidth="145.0" text="Github Repository Link" />
+                <TableColumn fx:id="colProjectDescription" prefWidth="317.0" text="Project Description" />
+                <TableColumn fx:id="projectCurrentStatus" prefWidth="195.0" text="Current Project Status" />
+                <TableColumn fx:id="colStartingDate" prefWidth="131.0" text="Starting Date" />
+                <TableColumn fx:id="colEndingDate" prefWidth="118.0" text="Ending Date" />
+            </columns>
+        </TableView>
+        <Text layoutX="392.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Keyword To Search">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="keywordToSearch" layoutX="617.0" layoutY="91.0" prefHeight="25.0" prefWidth="293.0" promptText="Enter the Keyword To Search" />
+        <Button layoutX="542.0" layoutY="695.0" mnemonicParsing="false" onAction="#performUpdateProjectStatus" text="Update Project Current Status">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

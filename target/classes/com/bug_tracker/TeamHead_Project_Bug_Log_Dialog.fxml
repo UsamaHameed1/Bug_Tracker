@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.ButtonType?>
+
+
+<DialogPane prefHeight="514.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bug_tracker.GUI.Team_Head.TeamHead_Project_Bug_Log_Dialog_Controller">
+    <content>
+        <AnchorPane prefHeight="856.0" prefWidth="1100.0">
+            <children>
+                <Text layoutX="529.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete Bug Log of A Project">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="tableviewBugLog" layoutX="20.0" layoutY="148.0" prefHeight="525.0" prefWidth="1346.0">
+                    <columns>
+                        <TableColumn fx:id="colBugID" prefWidth="76.0" text="Bug ID" />
+                        <TableColumn fx:id="colBugTitle" prefWidth="140.0" text="Bug Title" />
+                        <TableColumn fx:id="colBugDescription" prefWidth="139.0" text="Bug Description" />
+                        <TableColumn fx:id="colBugCurrentStatus" prefWidth="145.0" text="Current Status" />
+                        <TableColumn fx:id="colCodeLineNumber" prefWidth="117.0" text="Code Line Number" />
+                        <TableColumn fx:id="colRepoCommitHash" prefWidth="157.0" text="Repository Commit Hash" />
+                        <TableColumn fx:id="colNoteMsg" prefWidth="136.0" text="Note/Message" />
+                        <TableColumn fx:id="colCategory" prefWidth="111.0" text="Category" />
+                        <TableColumn fx:id="colAssignementDate" prefWidth="116.0" text="Assignment Date" />
+                        <TableColumn fx:id="colClosingDate" prefWidth="124.0" text="Closing Date" />
+                        <TableColumn fx:id="colAuthorName" prefWidth="84.0" text="Author Name" />
+                        <TableColumn fx:id="bugSolution" prefWidth="203.0" text="Bug Solution" />
+
+                    </columns>
+                </TableView>
+                <Text layoutX="439.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Keyword To Search">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="keywordToSearch" layoutX="664.0" layoutY="91.0" prefHeight="25.0" prefWidth="293.0" promptText="Enter the Keyword To Search" />
+            </children>
+        </AnchorPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane prefHeight="514.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bug_tracker.GUI.Developer.Developer_Manage_BugSelected_BugDetailsUpdateDialog_Controller">
+    <content>
+        <AnchorPane prefHeight="942.0" prefWidth="1160.0">
+            <children>
+                <Text layoutX="485.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report A Bug">
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+                </Text>
+                <Text layoutX="486.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Details Menu">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="78.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="authorName" layoutX="235.0" layoutY="103.0" prefHeight="25.0" prefWidth="337.0" promptText="Enter Author Name" />
+                <Text layoutX="78.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Title">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="bugTitle" layoutX="235.0" layoutY="150.0" prefHeight="25.0" prefWidth="337.0" promptText="Enter Bug Title" />
+                <Text layoutX="78.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Descripion">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextArea fx:id="bugDescription" layoutX="235.0" layoutY="192.0" prefHeight="105.0" prefWidth="337.0" promptText="Enter Bug Description" />
+                <Text layoutX="78.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Assignment Date">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <DatePicker fx:id="bugAssignmentDate" layoutX="298.0" layoutY="314.0" prefHeight="25.0" prefWidth="273.0" />
+                <Text layoutX="78.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Status">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="bugStatus" layoutX="234.0" layoutY="700.0" prefHeight="25.0" prefWidth="337.0" promptText="Enter Bug Status" />
+                <Text layoutX="78.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code Line Number">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="bugRelvantCodeLine" layoutX="285.0" layoutY="371.0" prefHeight="25.0" prefWidth="287.0" promptText="Enter Bug Code Line" text="-" />
+                <Text layoutX="78.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repository Commit Hash">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="bugRelatedCommitHasg" layoutX="350.0" layoutY="420.0" prefHeight="25.0" prefWidth="222.0" promptText="Enter Commit Hash" text="-" />
+                <Text layoutX="78.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message/Note">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <TextArea fx:id="messageNote" layoutX="235.0" layoutY="467.0" prefHeight="105.0" prefWidth="337.0" promptText="Enter A Note For the Developer" />
+                <Text layoutX="78.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <ComboBox fx:id="bugCategory" layoutX="238.0" layoutY="620.0" prefHeight="25.0" prefWidth="189.0" promptText="Select Bug Category" />
+                <Text layoutX="769.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned To">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <Text layoutX="775.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Tester Developers List">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text layoutX="778.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Developers List">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="tester_TableView" layoutX="722.0" layoutY="67.0" prefHeight="237.0" prefWidth="410.0">
+                    <columns>
+                        <TableColumn fx:id="testerName" prefWidth="151.0" text="Name" />
+                        <TableColumn fx:id="testerContactNo" prefWidth="100.0" text="Contact No" />
+                        <TableColumn fx:id="testerEmail" prefWidth="63.0" text="Email" />
+                        <TableColumn fx:id="testerDesignation" prefWidth="95.0" text="Designation" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="developer_TableView" layoutX="722.0" layoutY="357.0" prefHeight="237.0" prefWidth="410.0">
+                    <columns>
+                        <TableColumn fx:id="developerName" prefWidth="151.0" text="Name" />
+                        <TableColumn fx:id="developerContactNo" prefWidth="100.0" text="Contact No" />
+                        <TableColumn fx:id="developerEmail" prefWidth="63.0" text="Email" />
+                        <TableColumn fx:id="developerDesignation" prefWidth="95.0" text="Designation" />
+                    </columns>
+                </TableView>
+                <Button layoutX="503.0" layoutY="820.0" mnemonicParsing="false" onAction="#performUpdateBugStatus" prefHeight="25.0" prefWidth="190.0" text="Update Reported Bug Details" />
+                <ComboBox fx:id="assignToDeveloper" layoutX="897.0" layoutY="618.0" prefHeight="25.0" prefWidth="189.0" promptText="Assign To Developer" />
+            <Text layoutX="598.0" layoutY="719.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Describe Solution">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="describeSolution" layoutX="778.0" layoutY="696.0" prefHeight="105.0" prefWidth="337.0" promptText="Describe The solution you have used" />
+            <Text layoutX="78.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Closing Date">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="bugClosingDate" layoutX="298.0" layoutY="751.0" prefHeight="25.0" prefWidth="273.0" />
+            <Text fill="RED" layoutX="227.0" layoutY="684.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In order to close a bug type : bug-closed">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

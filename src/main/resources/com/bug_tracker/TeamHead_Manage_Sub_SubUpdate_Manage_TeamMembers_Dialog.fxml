@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane prefHeight="514.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bug_tracker.GUI.Team_Head.UpdateProjectDetails_UpdateTeamMembers_Dialog_Controller">
+    <content>
+        <AnchorPane prefHeight="566.0" prefWidth="1160.0">
+            <children>
+                <Text layoutX="295.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Team Members for A Project">
+                    <font>
+                        <Font size="38.0" />
+                    </font>
+                </Text>
+                <Label fx:id="insertStatus" layoutX="815.0" layoutY="746.0" prefHeight="17.0" prefWidth="340.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Text layoutX="734.0" layoutY="773.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Button layoutX="408.0" layoutY="746.0" mnemonicParsing="false" onAction="#perform_UpdateDetails" text="Update Selected Team Members">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Text layoutX="94.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Tester Designation">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Text>
+                <Text layoutX="426.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Developers Designation">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Text>
+                <Text layoutX="836.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Selected Team Members">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="Tester_TableView" layoutX="18.0" layoutY="205.0" prefHeight="449.0" prefWidth="343.0">
+                    <columns>
+                        <TableColumn fx:id="col_testerName" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="col_testerContact" prefWidth="98.0" text="Contact No" />
+                        <TableColumn fx:id="col_testerEmail" prefWidth="52.0" text="Email" />
+                        <TableColumn fx:id="col_testerDesignation" prefWidth="117.0" text="Designation" />
+                    </columns>
+                </TableView>
+                <Button layoutX="149.0" layoutY="680.0" mnemonicParsing="false" onAction="#insertSelectedTester" text="Insert Tester">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Label layoutX="61.0" layoutY="163.0" text="Enter Keyword" />
+                <TextField layoutX="156.0" layoutY="159.0" promptText="Enter Keyword Developers" />
+                <TableView fx:id="Developers_TableView" layoutX="401.0" layoutY="205.0" prefHeight="449.0" prefWidth="343.0">
+                    <columns>
+                        <TableColumn fx:id="col_developerName" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="col_developerContactNo" prefWidth="75.0" text="Contact No" />
+                        <TableColumn fx:id="col_developerEmail" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="col_developerDesignation" prefWidth="117.0" text="Designation" />
+                    </columns>
+                </TableView>
+                <Label layoutX="444.0" layoutY="163.0" text="Enter Keyword" />
+                <TextField layoutX="539.0" layoutY="159.0" promptText="Enter Keyword Testers" />
+                <TableView fx:id="TeamMembers_TableView" layoutX="799.0" layoutY="209.0" prefHeight="449.0" prefWidth="343.0">
+                    <columns>
+                        <TableColumn fx:id="col_teamMembersName" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="col_teamMembersContactNo" prefWidth="75.0" text="Contact No" />
+                        <TableColumn fx:id="col_teamMembersEmail" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="col_teamMembersDesignation" prefWidth="117.0" text="Designation" />
+                    </columns>
+                </TableView>
+                <Label layoutX="842.0" layoutY="167.0" text="Enter Keyword" />
+                <TextField fx:id="teamMembersKeyword" layoutX="937.0" layoutY="163.0" prefHeight="25.0" prefWidth="201.0" promptText="Enter Keyword Team Members" />
+                <Button layoutX="521.0" layoutY="680.0" mnemonicParsing="false" onAction="#insertSelectedDeveloper" text="Insert Developers">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Line endX="-100.0" endY="585.0" layoutX="875.0" layoutY="128.0" startX="-100.0" />
+                <Button layoutX="883.0" layoutY="680.0" mnemonicParsing="false" onAction="#performRemoveTeamMember" text="Remove Team Member">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+
+            </children>
+        </AnchorPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="1055.0" style="-fx-background-color: .;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bug_tracker.GUI.LoginScreen_Controller">
+   <children>
+      <AnchorPane layoutX="569.0" layoutY="26.0" prefHeight="663.0" prefWidth="457.0" style="-fx-background-color: #031e2d; -fx-border-radius: 30; -fx-border-width: 5;">
+         <children>
+            <Label layoutX="122.0" layoutY="92.0" prefHeight="50.0" prefWidth="307.0" style="-fx-text-fill: #f9235f;" text="Bug Tacker ">
+               <font>
+                  <Font name="Futura Book BT" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="176.0" style="-fx-text-fill: #f9235f;" text="Username">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="217.0" style="-fx-text-fill: #f9235f;" text="Password">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="151.0" layoutY="297.0" prefHeight="17.0" prefWidth="196.0" style="-fx-text-fill: #f9235f;" text="Login As" textFill="WHITE">
+               <font>
+                  <Font name="Futura Bold" size="39.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="165.0" layoutY="183.0" prefHeight="25.0" prefWidth="221.0" promptText="Enter Username" />
+            <TextField fx:id="password" layoutX="165.0" layoutY="224.0" prefHeight="25.0" prefWidth="221.0" promptText="Enter Password" />
+            <RadioButton fx:id="asAdmin" layoutX="42.0" layoutY="373.0" mnemonicParsing="false" onAction="#getLoginRole" prefHeight="17.0" prefWidth="86.0" style="-fx-text-fill: #ffffff;" text="Admin">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="loginRadio" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="asTester" layoutX="42.0" layoutY="412.0" mnemonicParsing="false" onAction="#getLoginRole" prefHeight="17.0" prefWidth="86.0" style="-fx-text-fill: #ffffff;" text="Tester" toggleGroup="$loginRadio">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="asDeveloper" layoutX="42.0" layoutY="449.0" mnemonicParsing="false" onAction="#getLoginRole" prefHeight="26.0" prefWidth="139.0" style="-fx-text-fill: #ffffff;" text="Developer" toggleGroup="$loginRadio">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="asTeamHead" layoutX="42.0" layoutY="492.0" mnemonicParsing="false" onAction="#getLoginRole" prefHeight="26.0" prefWidth="158.0" style="-fx-text-fill: #ffffff;" text="Team Head" toggleGroup="$loginRadio">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="login_BTN" layoutX="151.0" layoutY="563.0" mnemonicParsing="false" onAction="#performLogin" prefHeight="52.0" prefWidth="196.0" text="Login">
+               <font>
+                  <Font name="Futura Bold" size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imageView" fitHeight="333.0" fitWidth="500.0" layoutX="28.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Assests/main.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
