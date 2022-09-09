@@ -11,4 +11,4 @@ Bug Tracking software helps in smooth cordination between the Team Head, Develop
 - Developer Portal
 - Tester Portal
 
-### _The project is still in development phase and need some fixed !_
+### _The project is still in development phase and need some fixes !_
